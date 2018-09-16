@@ -47,5 +47,67 @@ for i in range(2**len(li)):
 # Remember that a given item can only be in bag1, bag2, 
 # or neither bag -- it is not possible for an item to be present in both bags!
 
+import random
 
+class Item(object):
+    def __init__(self, n, v, w):
+        self.name = n
+        self.value = float(v)
+        self.weight = float(w)
+    def getName(self):
+        return self.name
+    def getValue(self):
+        return self.value
+    def getWeight(self):
+        return self.weight
+    def __str__(self):
+        return '<' + self.name + ', ' + str(self.value) + ', '\
+                     + str(self.weight) + '>'
+
+def buildItems():
+    return [Item(n,v,w) for n,v,w in (('clock', 175, 10),
+                                      ('painting', 90, 9),
+                                      ('radio', 20, 4),
+                                      ('vase', 50, 2),
+                                      ('book', 10, 1),
+                                      ('computer', 200, 20))]
+
+def buildRandomItems(n):
+    return [Item(str(i),10*random.randint(1,10),random.randint(1,10))
+            for i in range(n)]
+
+def yieldAllCombos(items):
+    """
+        Generates all combinations of N items into two bags, whereby each
+        item is in one or zero bags.
+
+        Yields a tuple, (bag1, bag2), where each bag is represented as a list
+        of which item(s) are in each bag.
+    """
+    # Your code here
+    N = len(items)
+    # enumerate the 2**N possible combinations
+    for i in range(3**N):
+        print('i =', i)
+        bag1 = []
+        bag2 = []
+        for j in range(N):
+            print('j =', j)
+            print('i // 3^j =', i >> 3**j)
+            print('(i // 3^j) % 3 =', (i >> 3**j) % 3)
+            if (i // 3**j) % 3 == 1:
+                print('bag1 yeah')
+                bag1.append(items[j])
+            elif (i // 3**j) % 3 == 2:
+                print('bag2 yeah')
+                bag2.append((items[j]))
+        yield bag1, bag2
+        print('\n')
+
+li = ['A', 'B', 'C', 'D']
+
+liIteration = yieldAllCombos(li)
+
+for i in range(3**len(li)):
+    print(liIteration.__next__())
     
