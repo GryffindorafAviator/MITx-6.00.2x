@@ -16,6 +16,7 @@ Here's a table of the items from the slides:
 For this problem, assume that the maximum weight the burglar can carry is 20.
 
 1. Metric: max value
+
     The burglar should first pick:
     ```
     computer
@@ -27,6 +28,7 @@ For this problem, assume that the maximum weight the burglar can carry is 20.
     ```
     
 1. Metric: min weight
+
     The burglar should first pick:
     ```
     book
@@ -39,6 +41,7 @@ For this problem, assume that the maximum weight the burglar can carry is 20.
     
     
 1. Metric: max value/weight ratio
+
     The burglar should first pick:
     ```
     vase
