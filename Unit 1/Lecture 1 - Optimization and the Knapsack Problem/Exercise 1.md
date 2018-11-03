@@ -1,5 +1,6 @@
 # Exercise 1
 6/6 points (graded)
+
 As a burglar robs a house, she finds the following items:
 
 * Dirt - Weight: 4, Value: 0
