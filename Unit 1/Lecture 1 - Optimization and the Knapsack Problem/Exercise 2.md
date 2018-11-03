@@ -1,7 +1,8 @@
 # Exercise 2
 6/6 points (graded)
 
-Please help the burglar out! For each of the following greedy metrics, what should be the burglar's first two choices of items? Here's a table of the items from the slides:
+Please help the burglar out! For each of the following greedy metrics, what should be the burglar's first two choices of items? 
+Here's a table of the items from the slides:
 
 | item | $ | kg | $/kg |
 | --- | :-: | :-: | :-: |
