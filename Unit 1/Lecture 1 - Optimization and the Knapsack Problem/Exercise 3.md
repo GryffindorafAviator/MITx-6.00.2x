@@ -112,9 +112,9 @@ def look_for_all_the_things(myList):
     return False
     ```
     
-    ```
-    2^n
-    ```
+  ```
+  2^n
+  ```
 
         
     
